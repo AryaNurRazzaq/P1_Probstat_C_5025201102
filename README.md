@@ -175,15 +175,15 @@ hist(set_data, main = "Histogram N = 10")
       
 N = 100
 set_data <- rexp(N, rate = 3)
-hist(y_rexp, main = "Histogram N = 100")
-       
+hist(set_data, main = "Histogram N = 100")
+
 N = 1000
 set_data <- rexp(N, rate = 3)
-hist(y_rexp, main = "Histogram N = 1,000")
+hist(set_data, main = "Histogram N = 1,000")
 
 N = 10000
 set_data <- rexp(N, rate = 3)
-hist(y_rexp, main = "Histogram N = 10,000")
+hist(set_data, main = "Histogram N = 10,000")
 ```
 ### 5.c
 Nilai Rataan (μ) dan Varian (σ2) dari Distribusi Exponensial untuk n = 100 dan λ = 3
@@ -198,7 +198,45 @@ set_data <- rexp(n, rate)
 mean(set_data)
 var(set_data)
 ```
+## Soal 6
+Diketahui generate random nilai sebanyak 100 data, mean = 50, sd = 8. 
+### 6.a
+Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2), hitung Z-Score Nya dan plot
+data generate randomnya dalam bentuk grafik. Petunjuk(gunakan fungsi plot()). Keterangan :
+X1 = Dibawah rata-rata
+X2 = Diatas rata-rata
+> Untuk mendapatkan nilai x,X1,X2 dengan menggunakan `runif()`dan untuk membuat grafik menggunakan `plot()`
+```sh
+X1 = runif(1, max = mean)
+X2 = runif(1, min = mean, max = 100)
+x = runif(1, min = X1, max = X2)
 
+set_data <- rnorm(n, mean, sd)
+
+iter = seq(1, n, by = 1)
+plot(iter, set_data, type = 'l')
+
+dnorm(iter, mean, sd)
+
+x.z <- (x - mean) / sd
+x.z
+```
+### 6.b
+Generate Histogram dari Distribusi Normal dengan breaks 50 dan format penamaan:
+NRP_Nama_Probstat_{Nama Kelas}_DNhistogram
+```sh
+hist(set_data, breaks = 50, main = "5025201102_Arya Nur_Probstat_C_DNhistogram
+")
+```
+### 6.c
+Nilai Varian (σ2) dari hasil generate random nilai Distribusi Normal.
+```sh
+var(set_data)
+```
+## REFERENSI
+[https://rpubs.com/mpfoley73/458721]
+[https://www.statology.org/plot-binomial-distribution-r/]
+[https://bookdown.org/gabriel_butler/ECON41Labs/tutorial-5-the-poisson-distribution.html]
 
 
 
