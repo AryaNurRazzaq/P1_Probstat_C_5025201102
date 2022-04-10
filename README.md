@@ -43,6 +43,7 @@ data.frame(x = 0:10, prob = dgeom(x = 0:10, prob = p)) %>%
        x = "Kegagalan sebelum keberhasilan pertama (x)",
        y = "Probabilitas") 
   ```
+  <img width="532" alt="Screen Shot 2022-04-10 at 20 54 39" src="https://user-images.githubusercontent.com/103361498/162624179-72ca0744-7451-4436-9ea9-57b0c044cc3a.png">
   ### 1.e
   Nilai Rataan (μ) dan Varian (σ2) dari Distribusi Geometrik.
   > Untuk soal ini dapat dibuat terlebih dahulu `set_data` untuk menyimpan hasil random data dan untuk mencari mean digunakan `mean()` dan untuk varian menggunakan `var()`
@@ -72,6 +73,8 @@ p = dbinom(x, size, prob)
 
 plot(x,p,type='h')
 ```
+<img width="607" alt="Screen Shot 2022-04-10 at 21 09 28" src="https://user-images.githubusercontent.com/103361498/162624225-827fa89f-a840-4758-994c-637ceb971eeb.png">
+
 ### 2.c
 Nilai Rataan (μ) dan Varian (σ2) dari Distribusi Binomial.
 > Untuk soal ini untuk mencari mean digunakan `mean()` dan untuk varian menggunakan `var()`
@@ -117,6 +120,8 @@ babies %>% ggplot() +
 
 babies %>% dplyr::summarize(six_babies = sum(babies$data > 6) / n())
 ```
+<img width="601" alt="Screen Shot 2022-04-10 at 21 09 49" src="https://user-images.githubusercontent.com/103361498/162624258-409c6e99-14f3-449a-a15d-4d3485a5e2b1.png">
+
 ### 3.c
 dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
 > Dari percobaan yang dilakukan didapatkan hasil yang kurang lebih sama yaitu  0.1281201 dan 0.1150685
@@ -147,6 +152,8 @@ n = 100
 set_data = rchisq(n, v)
 hist(set_data, main = "Chi Square Histogram")
 ```
+<img width="570" alt="Screen Shot 2022-04-10 at 21 10 01" src="https://user-images.githubusercontent.com/103361498/162624269-5845021d-b30b-40d0-8a1d-4c0e6af7d0b3.png">
+
 ### 4.c 
 Nilai Rataan (μ) dan Varian (σ2) dari Distribusi Chi-Square.
 > Untuk mencari rataan digunakan `mean()` dan untuk varian menggunakan `var()`
@@ -185,6 +192,11 @@ N = 10000
 set_data <- rexp(N, rate = 3)
 hist(set_data, main = "Histogram N = 10,000")
 ```
+<img width="598" alt="Screen Shot 2022-04-10 at 21 22 24" src="https://user-images.githubusercontent.com/103361498/162624277-3986fe7c-d4e6-492b-b5a1-6c16241b77ce.png">
+<img width="597" alt="Screen Shot 2022-04-10 at 21 22 45" src="https://user-images.githubusercontent.com/103361498/162624284-c448feb0-48e9-4416-8d2a-4fdec2192e08.png">
+<img width="588" alt="Screen Shot 2022-04-10 at 21 23 07" src="https://user-images.githubusercontent.com/103361498/162624285-3425e9fe-3aad-4fa8-a4bc-10adb1e890ad.png">
+<img width="585" alt="Screen Shot 2022-04-10 at 21 23 16" src="https://user-images.githubusercontent.com/103361498/162624289-c130a4c1-dba9-4b93-adcc-88a86481fba4.png">
+
 ### 5.c
 Nilai Rataan (μ) dan Varian (σ2) dari Distribusi Exponensial untuk n = 100 dan λ = 3
 ● Gunakan set.seed(1)
@@ -221,6 +233,7 @@ dnorm(iter, mean, sd)
 x.z <- (x - mean) / sd
 x.z
 ```
+<img width="606" alt="Screen Shot 2022-04-10 at 21 23 37" src="https://user-images.githubusercontent.com/103361498/162624296-206da822-ea3b-4a31-abce-2e62eabde69d.png">
 ### 6.b
 Generate Histogram dari Distribusi Normal dengan breaks 50 dan format penamaan:
 NRP_Nama_Probstat_{Nama Kelas}_DNhistogram
@@ -228,6 +241,8 @@ NRP_Nama_Probstat_{Nama Kelas}_DNhistogram
 hist(set_data, breaks = 50, main = "5025201102_Arya Nur_Probstat_C_DNhistogram
 ")
 ```
+<img width="585" alt="Screen Shot 2022-04-10 at 21 23 48" src="https://user-images.githubusercontent.com/103361498/162624307-fa7f8644-2ca6-4e2b-82f1-5dc5869a5a4c.png">
+
 ### 6.c
 Nilai Varian (σ2) dari hasil generate random nilai Distribusi Normal.
 ```sh
